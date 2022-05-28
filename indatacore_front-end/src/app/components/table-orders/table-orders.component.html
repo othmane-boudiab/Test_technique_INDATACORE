@@ -1,0 +1,40 @@
+<div class="container mx-auto bg-white mt-6 p-6">
+  <div class="flex items-center">
+    <div class="flex justify-between w-full">
+      <div class="flex items-center">
+        Orders
+      </div>
+      <a href="" class="flex items-center" routerLink="/exercices/add">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="32" height="32"><path fill="none" d="M0 0h24v24H0z"/><path d="M4 3h16a1 1 0 0 1 1 1v16a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1zm1 2v14h14V5H5zm6 6V7h2v4h4v2h-4v4h-2v-4H7v-2h4z" fill="rgba(0,0,0,1)"/></svg>
+      </a>
+    </div>
+  </div>
+  <table class=" table-auto w-full mt-4">
+    <thead class="hidden lg:table-header-group">
+      <tr class="w-full border-y-2  border-gray-100">
+        <th class="lg:text-left lg:py-2 lg:px-1">Name</th>
+        <th class="lg:text-left lg:py-2 lg:px-3">Description</th>
+        <th class="lg:text-left lg:py-2 lg:px-3">Quantity</th>
+        <th class="lg:text-left lg:py-2 lg:px-3">Created at </th>
+        <th class="lg:text-left lg:py-2 lg:px-3 ">Updated at</th>
+        <th class="lg:text-left lg:py-2 lg:px-3">Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="lg:text-left lg:py-2 lg:px-1">samsung</td>
+        <td class="lg:text-left lg:py-2 lg:px-3">Lorem Ipsum is simply dummy printing</td>
+        <td class="lg:text-left lg:py-2 lg:px-3">20</td>
+        <td class="lg:text-left lg:py-2 lg:px-3">10/05/2022</td>
+        <td class="lg:py-2 px-3">
+            20/05/2022
+        </td>
+        <td class="lg:text-left lg:py-2 px-3 flex relative">
+          <svg xmlns="http://www.w3.org/2000/svg" routerLink="/exercices/edit" class="mr-4 cursor-pointer hover:fill-mainbleu" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M6.414 16L16.556 5.858l-1.414-1.414L5 14.586V16h1.414zm.829 2H3v-4.243L14.435 2.322a1 1 0 0 1 1.414 0l2.829 2.829a1 1 0 0 1 0 1.414L7.243 18zM3 20h18v2H3v-2z"/></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" class="mr-4 cursor-pointer hover:fill-mainbleu" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M17 6h5v2h-2v13a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V8H2V6h5V3a1 1 0 0 1 1-1h8a1 1 0 0 1 1 1v3zm1 2H6v12h12V8zm-9 3h2v6H9v-6zm4 0h2v6h-2v-6zM9 4v2h6V4H9z"/></svg>
+        </td>
+      </tr>
+
+    </tbody>
+  </table>
+</div>
