@@ -1,0 +1,14 @@
+<form [formGroup]="formOrder" (ngSubmit)="addOrder()" class="max-w-5xl mx-auto mt-6">
+  <span class=" text-2xl font-semibold text-bleudark">Add Activite</span>
+  <div class="flex">
+      <input type="text" formControlName="name" placeholder="Name" class="border mt-3 mb-3 w-full py-2 pl-3 border-neutral-200 rounded-md">
+  </div>
+  <div>
+    <textarea name="" id="" formControlName="description" placeholder="description" cols="30" rows="10" class="border mt-3 mb-3 w-full py-2 pl-3 border-neutral-200 rounded-md mr-3"></textarea>
+  </div>
+  <div class="flex">
+    <input type="number" formControlName="quantity" placeholder="Quantity" class="border mt-3 mb-3 w-full py-2 pl-3 border-neutral-200 rounded-md">
+</div>
+
+<button type="submit" class=" bg-mainbleu text-mainbg mt-3 px-8 py-2 rounded-md hover:bg-blue-700">Add Activite</button>
+</form>

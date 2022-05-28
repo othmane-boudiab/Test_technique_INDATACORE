@@ -1,3 +1,4 @@
+import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
@@ -8,6 +9,10 @@ import { NavBarComponent } from './components/nav-bar/nav-bar.component';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { OrdersComponent } from './pages/orders/orders.component';
 import { TableOrdersComponent } from './components/table-orders/table-orders.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { AddOrderComponent } from './components/add-order/add-order.component';
+import { AddOrdersComponent } from './pages/add-orders/add-orders.component';
+import { ChartComponent } from './components/chart/chart.component';
 
 @NgModule({
   declarations: [
@@ -16,11 +21,17 @@ import { TableOrdersComponent } from './components/table-orders/table-orders.com
     NavBarComponent,
     DashboardComponent,
     OrdersComponent,
-    TableOrdersComponent
+    TableOrdersComponent,
+    AddOrderComponent,
+    AddOrdersComponent,
+    ChartComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
