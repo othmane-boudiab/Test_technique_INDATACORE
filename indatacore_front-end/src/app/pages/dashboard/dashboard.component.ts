@@ -13,18 +13,8 @@ export class DashboardComponent implements OnInit {
   constructor(private order: OrdersService) { }
 
   ngOnInit(): void {
-    this.getOrders();
-    console.log(this.orders);
-
-
   }
 
-  getOrders() {
-    this.order.getOrders().subscribe(
-      data => {
-        this.orders = data;
-      }
-    )
-  }
+
 
 }
