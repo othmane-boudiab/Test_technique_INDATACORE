@@ -1,6 +1,7 @@
+import { Router } from '@angular/router';
 import { Order } from './../../model/order';
 import { OrdersService } from './../../service/orders.service';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnChanges, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-table-orders',
@@ -10,11 +11,10 @@ import { Component, OnInit } from '@angular/core';
 export class TableOrdersComponent implements OnInit {
 
   orders: Order[] = [];
-  constructor(private order: OrdersService) { }
+  constructor(private order: OrdersService, private router: Router) { }
 
   ngOnInit(): void {
     this.getOrders();
-    console.log(this.orders);
   }
 
   getOrders() {
@@ -23,6 +23,12 @@ export class TableOrdersComponent implements OnInit {
         this.orders = data;
       }
     )
+  }
+
+  randomOrder() {
+    this.order.randomOrder().subscribe(
+      () => this.getOrders()
+    );
   }
 
 }

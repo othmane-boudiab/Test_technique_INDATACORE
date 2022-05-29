@@ -25,4 +25,9 @@ public class OrderController {
     public void createOrder(@RequestBody Order order){
         orderService.addOrder(order);
     }
+
+    @PostMapping("/random")
+    public void randomOrder(){
+        orderService.randomData();
+    }
 }
