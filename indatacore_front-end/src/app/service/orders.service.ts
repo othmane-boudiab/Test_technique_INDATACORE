@@ -8,10 +8,10 @@ import { Observable } from 'rxjs';
 })
 export class OrdersService {
 
-  private apiUrl;
+  private apiUrl = 'http://localhost:8080/api/';;
 
   constructor(private http: HttpClient) {
-    this.apiUrl = 'http://localhost:8080/api/';
+    // this.apiUrl = 'http://localhost:8080/api/';
   }
 
   getOrders(): Observable<Order[]> {
