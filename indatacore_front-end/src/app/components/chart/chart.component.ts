@@ -1,5 +1,5 @@
-import { OrdersService } from './../../service/orders.service';
 import { Order } from './../../model/order';
+import { OrdersService } from './../../service/orders.service';
 import { Component, Input, OnInit } from '@angular/core';
 import Chart from 'chart.js/auto';
 import * as _ from 'lodash';

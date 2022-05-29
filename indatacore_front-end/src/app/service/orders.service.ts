@@ -25,5 +25,4 @@ export class OrdersService {
   randomOrder(): Observable<Order> {
     return this.http.post<Order>(this.apiUrl + 'random', {});
   }
-
 }

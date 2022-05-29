@@ -1,14 +1,14 @@
-import { Router } from '@angular/router';
-import { Order } from './../../model/order';
 import { OrdersService } from './../../service/orders.service';
-import { Component, OnChanges, OnInit } from '@angular/core';
+import { Order } from './../../model/order';
+import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-table-orders',
-  templateUrl: './table-orders.component.html',
-  styleUrls: ['./table-orders.component.css']
+  selector: 'app-table-order',
+  templateUrl: './table-order.component.html',
+  styleUrls: ['./table-order.component.css']
 })
-export class TableOrdersComponent implements OnInit {
+export class TableOrderComponent implements OnInit {
 
   orders: Order[] = [];
   constructor(private order: OrdersService, private router: Router) { }

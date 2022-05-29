@@ -1,5 +1,3 @@
-import { Order } from './../../model/order';
-import { OrdersService } from './../../service/orders.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -9,12 +7,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DashboardComponent implements OnInit {
 
-  orders: Order[] = [];
-  constructor(private order: OrdersService) { }
+  constructor() { }
 
   ngOnInit(): void {
   }
-
-
 
 }
