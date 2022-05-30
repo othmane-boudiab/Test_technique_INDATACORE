@@ -1,4 +1,5 @@
-import { HttpClientModule } from '@angular/common/http';
+import { HttpIntercepterAuthService } from './service/security/http-intercepter-auth.service';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
@@ -16,6 +17,11 @@ import { AddOrdersComponent } from './pages/add-orders/add-orders.component';
 import { UploadComponent } from './pages/upload/upload.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { UploaderModule } from 'angular-uploader';
+import { CookieService } from 'ngx-cookie-service';
+import { SigninComponent } from './pages/signin/signin.component';
+import { SignupComponent } from './pages/signup/signup.component';
+import { LoginComponent } from './components/login/login.component';
+import { RegisterComponent } from './components/register/register.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +35,11 @@ import { UploaderModule } from 'angular-uploader';
     DashboardComponent,
     OrdersComponent,
     AddOrdersComponent,
-    UploadComponent
+    UploadComponent,
+    SigninComponent,
+    SignupComponent,
+    LoginComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,
@@ -39,7 +49,10 @@ import { UploaderModule } from 'angular-uploader';
     ReactiveFormsModule,
     UploaderModule
   ],
-  providers: [],
+  providers: [
+    { provide: HTTP_INTERCEPTORS, useClass: HttpIntercepterAuthService, multi: true },
+    CookieService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

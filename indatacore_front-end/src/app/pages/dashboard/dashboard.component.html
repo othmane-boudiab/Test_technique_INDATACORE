@@ -4,10 +4,17 @@
     <app-nav-bar class="">
       <ng-container>Dashboard</ng-container>
     </app-nav-bar>
-    <div class="grid grid-cols-2 gap-4">
-      <app-chart my-id="chart1" type="bar"></app-chart>
-      <app-chart my-id="chart2" type="pie"></app-chart>
+    <div class="grid grid-cols-9 gap-10 container mx-auto">
+      <div class="col-span-4 flex flex-col justify-between">
+        <app-chart my-id="chart1" type="bar"></app-chart>
+      <app-chart my-id="chart3" type="line"></app-chart>
+      </div>
+      <div class="col-span-5">
+        <app-chart class="" my-id="chart2" type="pie"></app-chart>
+      </div>
+
+
     </div>
-    <app-chart my-id="chart3" type="line"></app-chart>
+
   </div>
 </div>

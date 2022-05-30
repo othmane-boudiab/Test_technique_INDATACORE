@@ -1,0 +1,43 @@
+<form [formGroup]="formGroupRegister" (ngSubmit)="register()" class=" bg-white drop-shadow-md p-12 rounded">
+  <div class="w-80">
+    <span class=" text-base">Welcome</span>
+  <h1 class=" text-3xl font-bold mb-3">Create Account </h1>
+  <div class="flex flex-col">
+    <label for="">Full Name</label>
+    <input formControlName="name" [ngClass]="name.invalid && (name.dirty || name.touched) ? 'border outline-none mt-3 mb-2 py-3 pl-3 border-red-500 bg-gray-50 rounded-md' : 'border outline-none mt-3 mb-4 py-3 pl-3 border-neutral-200 bg-gray-50 rounded-md'"
+    type="text" name="text" placeholder="John now">
+    <div *ngIf="name.invalid && (name.dirty || name.touched) " class="text-red-500">
+      <span *ngIf="name.errors.required">name required</span>
+      <span *ngIf="name.errors.minlength">name min 4 char</span>
+    </div>
+  </div>
+  <div class="flex flex-col">
+    <label for="">Email</label>
+    <input formControlName="email" [ngClass]="email.invalid && (email.dirty || email.touched) ? 'border outline-none mt-3 mb-2 py-3 pl-3 border-red-500 bg-gray-50 rounded-md' : 'border outline-none mt-3 mb-4 py-3 pl-3 border-neutral-200 bg-gray-50 rounded-md'"
+    type="email" name="email" placeholder="John.snow@gmail.com">
+    <div *ngIf="email.invalid && (email.dirty || email.touched) " class="text-red-500">
+      <span *ngIf="email.errors.required">email required</span>
+      <span *ngIf="email.errors.pattern">email incorrect</span>
+    </div>
+  </div>
+  <div class="flex flex-col">
+    <label for="">Password</label>
+    <input
+    formControlName="password"
+    [ngClass]="password.invalid && (password.dirty || password.touched) ? 'border outline-none mt-3 mb-2 py-3 pl-3 border-red-500 bg-gray-50 rounded-md' : 'border outline-none mt-3 mb-4 py-3 pl-3 border-neutral-200 bg-gray-50 rounded-md'"
+    type="password" name="password" placeholder="*********">
+    <div *ngIf="password.invalid && (password.dirty || password.touched) " class="text-red-500">
+      <span *ngIf="password.errors.required || password.errors.onlyContainSpace">password required</span>
+      <span *ngIf="password.errors.minlength">password min 4 char</span>
+    </div>
+  </div>
+  <div>
+    <button
+    type="submit"
+    class="text-center mt-5 w-full py-3 bg-mainbleu hover:bg-blue-700 rounded-md text-white">
+      Register now
+    </button>
+  </div>
+  <div class="mt-3">i have account <span routerLink="/signin" class="text-mainbleu cursor-pointer hover:underline hover:text-blue-700">sign in</span></div>
+  </div>
+</form>
