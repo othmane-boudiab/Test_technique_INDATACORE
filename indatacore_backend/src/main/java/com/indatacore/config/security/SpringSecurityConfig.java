@@ -56,9 +56,13 @@ public class SpringSecurityConfig extends WebSecurityConfigurerAdapter {
                 .antMatchers(HttpMethod.OPTIONS, "/**").permitAll()
                 .antMatchers("/signin").permitAll()
                 .antMatchers("/signup").permitAll()
+                .antMatchers("/v3/api-docs/**",
+                                            "/swagger-ui/**",
+                                            "/swagger-resources/**",
+                                            "/*/swagger-resources/**",
+                                            "/*/v3/api-docs/**").permitAll()
+
                 .anyRequest().authenticated();
-//                .and()
-//                .httpBasic();
     }
     @Bean
     DaoAuthenticationProvider authenticationProvider(){

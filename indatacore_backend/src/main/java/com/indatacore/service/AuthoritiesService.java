@@ -15,7 +15,7 @@ public class AuthoritiesService {
     @Autowired
     private AuthoritiesRipository authoritiesRipository;
 
-    @Transactional
+    @Transactional(readOnly = true)
     public List<Authorities> getAll(){
         return authoritiesRipository.findAll();
     }
